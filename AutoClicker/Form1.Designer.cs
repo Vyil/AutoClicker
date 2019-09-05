@@ -31,7 +31,7 @@
             this.checkBoxDelay = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.cursorLocationCheckbox = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.clickCounter = new System.Windows.Forms.Label();
+            this.noTimeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.secondsValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minutesValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericDelay)).BeginInit();
@@ -81,15 +82,17 @@
             this.textBox6.Size = new System.Drawing.Size(100, 20);
             this.textBox6.TabIndex = 11;
             // 
-            // checkBox3
+            // cursorLocationCheckbox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(253, 242);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(100, 17);
-            this.checkBox3.TabIndex = 12;
-            this.checkBox3.Text = "Cursor Location";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cursorLocationCheckbox.AutoSize = true;
+            this.cursorLocationCheckbox.Checked = true;
+            this.cursorLocationCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cursorLocationCheckbox.Location = new System.Drawing.Point(253, 242);
+            this.cursorLocationCheckbox.Name = "cursorLocationCheckbox";
+            this.cursorLocationCheckbox.Size = new System.Drawing.Size(100, 17);
+            this.cursorLocationCheckbox.TabIndex = 12;
+            this.cursorLocationCheckbox.Text = "Cursor Location";
+            this.cursorLocationCheckbox.UseVisualStyleBackColor = true;
             // 
             // checkBox4
             // 
@@ -100,6 +103,7 @@
             this.checkBox4.TabIndex = 13;
             this.checkBox4.Text = "Pick Location";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.Visible = false;
             // 
             // label2
             // 
@@ -267,11 +271,23 @@
             this.clickCounter.TabIndex = 31;
             this.clickCounter.Text = "0";
             // 
+            // noTimeLabel
+            // 
+            this.noTimeLabel.AutoSize = true;
+            this.noTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noTimeLabel.ForeColor = System.Drawing.Color.Red;
+            this.noTimeLabel.Location = new System.Drawing.Point(211, 316);
+            this.noTimeLabel.Name = "noTimeLabel";
+            this.noTimeLabel.Size = new System.Drawing.Size(0, 24);
+            this.noTimeLabel.TabIndex = 33;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.noTimeLabel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.numericDelay);
@@ -287,7 +303,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.cursorLocationCheckbox);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.checkBoxDelay);
@@ -307,7 +323,7 @@
         private System.Windows.Forms.CheckBox checkBoxDelay;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox cursorLocationCheckbox;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -327,6 +343,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label clickCounter;
+        private System.Windows.Forms.Label noTimeLabel;
     }
 }
 

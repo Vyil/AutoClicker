@@ -78,6 +78,7 @@ namespace AutoClicker
             if (time == 0)
             {
                 startButton.Enabled = true;
+                noTimeLabel.Text = "Can not start without a set time";
                 return;
             }
             timer = new System.Timers.Timer(time + delay);
@@ -88,6 +89,7 @@ namespace AutoClicker
             statusText.Text = "Enabled";
             clicks = 0;
             clickCounter.Text = "Clicking";
+            noTimeLabel.Text = "";
         }
 
         public int converToMS(int seconds, int minutes)

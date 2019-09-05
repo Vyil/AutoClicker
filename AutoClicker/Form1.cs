@@ -22,9 +22,6 @@ namespace AutoClicker
         private int delay = 0;
         private int clicks = 0;
 
-        [DllImport("User32.dll", SetLastError = true)]
-        public static extern int SendInput(int nInputs, ref INPUT pInputs, int cbSize);
-
         public struct MOUSEINPUT
         {
             public int dx;
@@ -117,6 +114,8 @@ namespace AutoClicker
             }
         }
 
+        [DllImport("User32.dll", SetLastError = true)]
+        public static extern int SendInput(int nInputs, ref INPUT pInputs, int cbSize);
         public void clickatcur(Object source, ElapsedEventArgs e)
         {
             //Get new delay after each loop

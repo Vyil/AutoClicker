@@ -20,6 +20,7 @@ namespace AutoClicker
 
         Random random = new Random();
         private int delay = 0;
+        private int clicks = 0;
 
         [DllImport("User32.dll", SetLastError = true)]
         public static extern int SendInput(int nInputs, ref INPUT pInputs, int cbSize);
@@ -56,6 +57,7 @@ namespace AutoClicker
                 timer.Stop();
                 timer.Dispose();
             }
+            clickCounter.Text = clicks.ToString();
             
         }
 
@@ -84,6 +86,8 @@ namespace AutoClicker
             startButton.Enabled = false;
             stopButton.Enabled = true;
             statusText.Text = "Enabled";
+            clicks = 0;
+            clickCounter.Text = "Clicking";
         }
 
         public int converToMS(int seconds, int minutes)
@@ -130,6 +134,7 @@ namespace AutoClicker
             i.mi.dwFlags = MOUSEEVENTF_LEFTUP;
             SendInput(1, ref i, Marshal.SizeOf(i));
 
+            clicks++;
         }
 
     }

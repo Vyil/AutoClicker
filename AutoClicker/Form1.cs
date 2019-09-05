@@ -43,13 +43,20 @@ namespace AutoClicker
         public Form1()
         {
             InitializeComponent();
+            stopButton.Enabled = false;
         }
 
         private void StopButton_Click(object sender, EventArgs e)
         {
-            startButton.Enabled = true;
-            timer.Stop();
-            timer.Dispose();
+            if (stopButton.Enabled)
+            {
+                startButton.Enabled = true;
+                stopButton.Enabled = false;
+                statusText.Text = "Disabled";
+                timer.Stop();
+                timer.Dispose();
+            }
+            
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -75,6 +82,8 @@ namespace AutoClicker
             timer.Elapsed += clickatcur;
             timer.Enabled = true;
             startButton.Enabled = false;
+            stopButton.Enabled = true;
+            statusText.Text = "Enabled";
         }
 
         public int converToMS(int seconds, int minutes)

@@ -46,6 +46,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.numericDelay = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.statusText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.secondsValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.minutesValue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericDelay)).BeginInit();
@@ -208,11 +210,33 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "X/Y functions not yet available";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(249, 320);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 20);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Status: ";
+            // 
+            // statusText
+            // 
+            this.statusText.AutoSize = true;
+            this.statusText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusText.Location = new System.Drawing.Point(322, 320);
+            this.statusText.Name = "statusText";
+            this.statusText.Size = new System.Drawing.Size(79, 20);
+            this.statusText.TabIndex = 29;
+            this.statusText.Text = "Disabled";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.statusText);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.numericDelay);
             this.Controls.Add(this.label7);
@@ -260,6 +284,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericDelay;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label statusText;
     }
 }
 

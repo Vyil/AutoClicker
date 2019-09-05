@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.textBoxDelay = new System.Windows.Forms.TextBox();
+            this.checkBoxDelay = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -50,32 +49,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.minutesValue)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // textBoxDelay
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.textBoxDelay.Location = new System.Drawing.Point(12, 97);
+            this.textBoxDelay.Name = "textBoxDelay";
+            this.textBoxDelay.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDelay.TabIndex = 7;
             // 
-            // checkBox1
+            // checkBoxDelay
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(165, 81);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(40, 17);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "On";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(165, 104);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(40, 17);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Off";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxDelay.AutoSize = true;
+            this.checkBoxDelay.Location = new System.Drawing.Point(147, 100);
+            this.checkBoxDelay.Name = "checkBoxDelay";
+            this.checkBoxDelay.Size = new System.Drawing.Size(40, 17);
+            this.checkBoxDelay.TabIndex = 8;
+            this.checkBoxDelay.Text = "On";
+            this.checkBoxDelay.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -228,9 +217,8 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.checkBoxDelay);
+            this.Controls.Add(this.textBoxDelay);
             this.Name = "Form1";
             this.Text = "AutoClicker";
             ((System.ComponentModel.ISupportInitialize)(this.secondsValue)).EndInit();
@@ -241,9 +229,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox textBoxDelay;
+        private System.Windows.Forms.CheckBox checkBoxDelay;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.CheckBox checkBox3;

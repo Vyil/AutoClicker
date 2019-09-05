@@ -26,6 +26,9 @@ namespace AutoClicker
         //input type constant
         const int INPUT_MOUSE = 0;
 
+        Random random = new Random();
+        private int delay = 0;
+
         [DllImport("User32.dll", SetLastError = true)]
         public static extern int SendInput(int nInputs, ref INPUT pInputs, int cbSize);
 
@@ -59,26 +62,24 @@ namespace AutoClicker
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            System.Console.WriteLine("start called");
-            System.Console.WriteLine("start called: " + secondsValue.Value );
-            System.Console.WriteLine("start called: " + minutesValue.Value );
-            System.Console.ReadLine();
-
             start(converToMS(Decimal.ToInt32(secondsValue.Value), Decimal.ToInt32(minutesValue.Value)));
-
-
         }
-
+        
         public void start(int time)
         {
+            
+            if (checkBoxDelay.Checked)
+            {
+                int delayGiven = Int32.Parse(textBoxDelay.Text);
+                delay = random.Next(0, delayGiven);
+            }
+
             if (time == 0)
             {
                 startButton.Enabled = true;
                 return;
             }
-            System.Console.WriteLine(time);
-            System.Console.ReadLine();
-            timer = new System.Timers.Timer(time);
+            timer = new System.Timers.Timer(time + delay);
             timer.Elapsed += clickatcur;
             timer.Enabled = true;
             startButton.Enabled = false;
@@ -89,13 +90,9 @@ namespace AutoClicker
 
         }
 
-        public void loopClicks()
-        {
-
-        }
-
         public int converToMS(int seconds, int minutes)
         {
+
             if (seconds == 0 && minutes == 0)
             {
                 return 0;
@@ -106,6 +103,7 @@ namespace AutoClicker
             }
             else if (seconds >= 0 && minutes == 0)
             {
+
                 return seconds * 1000;
             }
             else
@@ -119,8 +117,10 @@ namespace AutoClicker
 
         public void clickatcur(Object source, ElapsedEventArgs e)
         {
-            System.Console.WriteLine("Itiration: ");
-            System.Console.ReadLine();
+            //Get new delay after each loop
+            int delayGiven = Int32.Parse(textBoxDelay.Text);
+            delay = random.Next(0, delayGiven);
+
             INPUT i = new INPUT();
             i.type = INPUT_MOUSE;
             i.mi.dx = 0;

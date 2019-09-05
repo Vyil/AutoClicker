@@ -275,7 +275,7 @@
             // 
             this.noTimeLabel.AutoSize = true;
             this.noTimeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noTimeLabel.ForeColor = System.Drawing.Color.Red;
+            this.noTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.noTimeLabel.Location = new System.Drawing.Point(211, 316);
             this.noTimeLabel.Name = "noTimeLabel";
             this.noTimeLabel.Size = new System.Drawing.Size(0, 24);

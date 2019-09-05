@@ -78,7 +78,7 @@ namespace AutoClicker
             if (time == 0)
             {
                 startButton.Enabled = true;
-                noTimeLabel.Text = "Can not start without a set time";
+                noTimeLabel.Text = "Please tell me a click-interval ! O_o";
                 return;
             }
             timer = new System.Timers.Timer(time + delay);

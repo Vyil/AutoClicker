@@ -62,7 +62,7 @@ namespace AutoClicker
             
             if (checkBoxDelay.Checked)
             {
-                int delayGiven = Int32.Parse(textBoxDelay.Text);
+                int delayGiven = Decimal.ToInt32(numericDelay.Value);
                 delay = random.Next(0, delayGiven);
             }
 
@@ -105,8 +105,11 @@ namespace AutoClicker
         public void clickatcur(Object source, ElapsedEventArgs e)
         {
             //Get new delay after each loop
-            int delayGiven = Int32.Parse(textBoxDelay.Text);
-            delay = random.Next(0, delayGiven);
+            if(checkBoxDelay.Enabled)
+            {
+                int delayGiven = Decimal.ToInt32(numericDelay.Value);
+                delay = random.Next(0, delayGiven);
+            }            
 
             INPUT i = new INPUT();
             i.type = INPUT_MOUSE;

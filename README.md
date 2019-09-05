@@ -16,4 +16,4 @@ Still a work in progress, will make sure to make the executable available.
 * Get keybind for start/stop
 ```
 
-Made in C# by **Vyil
+Made in C# by **Vyil**

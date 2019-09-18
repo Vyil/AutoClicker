@@ -1,7 +1,8 @@
 # AutoClicker
 Needed an AutoClicker with random delay, so decided to code my own.
 
-Still a work in progress, will make sure to make the executable available.
+Still a work in progress, one day i'll make the executable available.
+So just build this badboy and do it yourself meanwhile.
 
 ### Current available functions
 
